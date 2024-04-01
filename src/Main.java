@@ -15,7 +15,7 @@ public class Main {
        // printArray("массив0 содержит ", massiv0);
         //calculeteSummaElementov(massiv2);
         //calculeteMinElement(massiv2);
-        calculeteIndMaxElement(massiv2);
+        System.out.println(calculeteIndMaxElement(massiv2));
 
 //        printArray("массив2 содержит ", massiv2);
 
@@ -83,19 +83,14 @@ public class Main {
         }
 
     public static int calculeteIndMaxElement(int[] massiv){
-        int maximum = 0;
+        int maximum = massiv[0]; // проверку сделать, чтобы проверять, что массив не пустой
         int index = 0;
 
         for (int i = 0; i < massiv.length; i++) {
-            if (i==0) {
-                {
-                    maximum = massiv[0];
-                }
+
                 if (maximum < massiv[i]){
                     index = i;
                 }
-            }
-
         }
         return index;
 
