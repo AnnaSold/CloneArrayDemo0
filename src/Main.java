@@ -13,7 +13,9 @@ public class Main {
         printArray("массив2 содержит ", massiv2);
        // fillArray(massiv0, 193);
        // printArray("массив0 содержит ", massiv0);
-
+        //calculeteSummaElementov(massiv2);
+        //calculeteMinElement(massiv2);
+        calculeteIndMaxElement(massiv2);
 
 //        printArray("массив2 содержит ", massiv2);
 
@@ -52,4 +54,51 @@ public class Main {
         readArray(m);
         return m;
     }
+    public static int calculeteSummaElementov(int[] massiv){
+        int summa = 0;
+
+        for (int i = 0; i < massiv.length; i++) {
+            summa += massiv[i];
+
+        }
+        return summa;
+    }
+
+    public static int calculeteMinElement(int[] massiv){
+        int minimum = 0;
+
+        for (int i = 0; i < massiv.length; i++) {
+            if (i==0) {
+                {
+                    minimum = massiv[0];
+                }
+                if (minimum > massiv[i]){
+                minimum = massiv[i];
+                }
+            }
+
+            }
+        return minimum;
+
+        }
+
+    public static int calculeteIndMaxElement(int[] massiv){
+        int maximum = 0;
+        int index = 0;
+
+        for (int i = 0; i < massiv.length; i++) {
+            if (i==0) {
+                {
+                    maximum = massiv[0];
+                }
+                if (maximum < massiv[i]){
+                    index = i;
+                }
+            }
+
+        }
+        return index;
+
+    }
+
 }
